@@ -1,22 +1,17 @@
-# 🏭 Sentinel Factory — Motor de Agentes Trabajadores Digitales
-
+🏭 Sentinel Factory — Motor de Agentes Trabajadores Digitales
 SaaS multi-tenant para agencias de marketing. Permite crear, gestionar y revender agentes de IA personalizados a PYMEs sin tocar una sola línea de código.
 
-👉 [Demo en vivo](#)
-
-## 🤖 ¿Qué es Sentinel Factory?
-
+🤖 ¿Qué es Sentinel Factory?
 Sentinel Factory es un motor donde la agencia entra, ingresa la URL de un cliente, y en 30 segundos tiene un agente listo: con los servicios, precios, horarios y personalidad de ese negocio específico.
 
-* **Multi-tenant:** Administra docenas de agentes independientes desde un solo dashboard.
-* **White-label total:** El cliente final solo ve su marca, sus colores y su personalidad. Sentinel Factory es invisible.
-* **Agente, no chatbot:** No es un árbol de decisiones rígido. Es IA real que responde, agenda y captura leads.
+Multi-tenant: Administra docenas de agentes independientes desde un solo dashboard.
 
-### 📐 Arquitectura de Flujo de Datos
+White-label total: El cliente final solo ve su marca, sus colores y su personalidad. Sentinel Factory es invisible.
 
-Transparencia total: en la demo, cada mensaje permite ver la latencia en milisegundos de cada capa del motor:
+Agente, no chatbot: No es un árbol de decisiones rígido. Es IA real que responde, agenda y captura leads.
 
-```text
+📐 Arquitectura de Flujo de Datos
+Plaintext
 Usuario 
    │
    ▼
@@ -76,16 +71,12 @@ Resultado: Con solo 10 clientes, la agencia genera $2.000 USD de ingresos y un m
 
 🚀 Instalación Rápida
 Bash
-git clone [https://github.com/dannisk9/sentinel](https://github.com/dannisk9/sentinel)
+git clone https://github.com/dannisk9/sentinel
 cd sentinel
 cp .env.example .env
-# Edita .env con tus keys
 docker-compose up --build
 ✅ App en http://localhost:8000
 ✅ Dashboard en http://localhost:8000/dashboard.html
 
 💰 Licencia y Compra (Acquire.com)
-Producto propietario, pago único. Desde $5.500 USD.
-Incluye código fuente completo, 30 días de soporte, llamada de onboarding y documentación técnica.
-
-¿Necesitas integraciones a medida (WhatsApp API, voz con ElevenLabs, apps móviles)? Consulta por tarifas de desarrollo post-venta.
+Producto propietario, pago único. Desde $5.500 USD. Incluye código fuente completo, 30 días de soporte, llamada de onboarding y documentación técnica.
