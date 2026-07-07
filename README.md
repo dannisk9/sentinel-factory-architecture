@@ -13,7 +13,7 @@
 ---
 
 ## 🤖 ¿Qué es Sentinel Factory?
-Sentinel Factory es un motor donde la agencia ingresa la URL de un cliente y, **en solo 30 segundos**, genera un agente listo con los servicios, precios, horarios y personalidad de ese negocio específico.
+Sentinel Factory es un motor donde la agencia ingresa la URL de un cliente y, **en solo 60 segundos**, genera un agente listo con los servicios, precios, horarios y personalidad de ese negocio específico.
 
 *   👥 **Multi-tenant:** Administra docenas de agentes independientes desde un solo dashboard.
 *   🎭 **White-label total:** El cliente final solo ve su marca, sus colores y su personalidad. Sentinel Factory es invisible.
