@@ -4,6 +4,14 @@
 
 ---
 
+## 🎬 Videos Demo
+
+- **AI Agent en segundos:** https://youtu.be/UXzRDa_hzqo
+- **Autopilot Engine:** https://youtu.be/M3Z6Qn_zHcs
+- **AI Shield en acción:** https://youtu.be/01zuAVJCvEE
+
+---
+
 ## 🤖 ¿Qué es Sentinel Factory?
 Sentinel Factory es un motor donde la agencia ingresa la URL de un cliente y, **en solo 30 segundos**, genera un agente listo con los servicios, precios, horarios y personalidad de ese negocio específico.
 
@@ -21,20 +29,29 @@ graph TD
     A[👤 Usuario] --> B[🛡️ AI Shield - Filtro de Seguridad]
     B --> C[🎯 Clasificador de Intención]
     C --> D[📚 RAG: Ingesta de pgvector + Búsqueda Semántica]
-    D --> E[🤖 LLM Claude / OpenAI + API Calendar]
+    D --> E[🤖 LLM OpenAI gpt-4o-mini + API Calendar]
     E --> F[🔒 PII Sanitizer / Privacy Shield]
     F --> G[🚀 Respuesta Segura]
 ```
 
 ---
 
+## 🛡️ AI Shield — Seguridad en Producción
+
+- Detecta y bloquea **jailbreak, extracción de prompt, código malicioso y abuso** — antes de que el mensaje llegue al LLM.
+- **Auto-bloqueo de IP tras 3 intentos** en una ventana de 10 minutos.
+- **Alerta por email al dueño** en cada bloqueo.
+- Ya bloqueó ataques reales contra el demo público en producción — verificado en logs, no simulado.
+
+---
+
 ## 🚀 El "Autopilot Engine": Tu Motor de Ventas
 La plataforma no solo crea bots, los vende por ti de forma automatizada:
 
-1.  🔍 **Prospección Masiva:** Escanea 100 negocios diarios en Google Maps (categoría a elección).
+1.  🔍 **Prospección On-Demand:** Escanea Google Maps por ciudad + categoría (cantidad de prospectos a elección del usuario).
 2.  ⚙️ **Generación Automática:** Crea un bot de demo para cada prospecto usando su propia web.
-3.  📸 **Prueba Social Instantánea:** Genera un GIF mostrando el bot respondiendo preguntas reales del negocio.
-4.  📧 **Cold Emailing:** Envía un email al dueño con el GIF incrustado. ¡El dueño ve su propio bot funcionando en 10 segundos!
+3.  📸 **Prueba Social Instantánea:** Genera un screenshot (PNG 1200×630) mostrando el bot respondiendo preguntas reales del negocio.
+4.  💬 **Outreach por WhatsApp:** Genera un link wa.me con mensaje pre-armado y el screenshot, listo para enviar al dueño del negocio.
 
 ---
 
@@ -52,19 +69,31 @@ La plataforma no solo crea bots, los vende por ti de forma automatizada:
 
 *   🐍 **Backend:** Python 3.13 + FastAPI (async).
 *   🗄️ **Base de Datos:** PostgreSQL con `pgvector` para búsqueda semántica.
+*   🧠 **IA:** OpenAI `gpt-4o-mini` (chat) + `text-embedding-3-small` (RAG).
+*   📲 **Mensajería:** Twilio (WhatsApp), credenciales por tenant, con validación de firma.
 *   🤖 **Automatización:** Playwright (scraping), Resend (correos transaccionales), Stripe (pagos).
 *   🐋 **Deploy:** Docker-Compose probado en Railway.
+*   ✅ **Tests:** 250 tests automatizados, suite offline en verde.
 
 ---
 
 ## 💰 Modelo de Negocio para la Agencia
 
+**Planes de la plataforma:**
+
+| Plan | Precio | Agentes | Destacado |
+| :--- | :--- | :--- | :--- |
+| Starter | **$39/mes** | 3 | Widget web + WhatsApp (BYOK Twilio) |
+| Professional | **$149/mes** | 10 | Autopilot Engine + métricas + ROI |
+| Enterprise | **$899/mes** | Hasta 100 | Soporte prioritario + credenciales Twilio propias |
+
+**Rentabilidad de ejemplo (plan Professional):**
 
 | Concepto | Detalle |
 | :--- | :--- |
-| **Costo Plataforma** | Plan Professional (20 agentes) = **$299/mes** |
+| **Costo Plataforma** | Plan Professional (10 agentes) = **$149/mes** |
 | **Venta Sugerida** | $150 – $300 USD/mes por cliente |
-| **Rentabilidad** | Con solo 10 clientes, la agencia genera **$2,000 USD** de ingresos con un margen neto de **$1,700 USD**. |
+| **Rentabilidad** | Con 10 clientes a ~$200/mes c/u, la agencia genera **$2,000 USD** de ingresos con un margen neto de **≈$1,851 USD** *(ejemplo ilustrativo, no un resultado real)*. |
 
 ---
 
@@ -85,9 +114,17 @@ docker-compose up --build
 
 ---
 
-## 💳 Licencia y Compra (Acquire.com)
+## 📋 Qué No Está Incluido
 
-Producto propietario, pago único desde **$5,500 USD**. 
+*   **Pre-revenue:** no hay clientes pagando activos todavía. Se vende como activo de código + infraestructura, no como negocio con ingresos.
+*   **Las API keys NO se transfieren:** el comprador debe usar sus propias credenciales para Stripe, OpenAI, Apify, Twilio (BYOK por tenant, por diseño), Google Cloud y Resend.
+*   **Stripe no está activado en producción:** el código de checkout + webhooks está completo, solo falta configurar las keys del comprador y las variables de entorno en Railway.
+
+---
+
+## 💳 Licencia y Compra
+
+Producto propietario, pago único: **$5,900 USD — o mejor oferta**.
 
 **¿Qué incluye?**
 *   📦 Código fuente completo.
@@ -95,4 +132,6 @@ Producto propietario, pago único desde **$5,500 USD**.
 *   📞 Llamada de onboarding + Documentación técnica.
 
 *¿Necesitas integraciones a medida (WhatsApp API, voz con ElevenLabs, apps móviles)? Consulta por nuestras tarifas de desarrollo post-venta.*
+
+**→ Disponible en marketplaces de venta de SaaS pre-revenue — pregunta por el link de listing vigente.**
 
